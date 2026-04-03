@@ -128,7 +128,7 @@ TUMOR_INFO = {
 @st.cache_resource
 def load_model():
     try:
-        return tf.keras.models.load_model("brain_tumor_model.h5")
+        return tf.keras.models.load_model("brain_tumor_model.keras")
     except Exception as e:
         st.error(f"⚠️ Could not load model: {e}")
         return None
@@ -227,7 +227,7 @@ with col_right:
     st.markdown('<div class="sec">🔬 Analysis Results</div>', unsafe_allow_html=True)
 
     if uploaded_file is not None:
-        model = keras.models.load_model("brain_tumor_model.h5", compile=False)
+        model = keras.models.load_model("brain_tumor_model.keras", compile=False)
         if model:
             with st.spinner("Analysing MRI scan…"):
 
