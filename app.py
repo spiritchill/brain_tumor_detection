@@ -17,7 +17,7 @@ import datetime
 import tempfile
 
 # ─────────────────────────────────────────────
-#  Page config
+#  Page Config
 # ─────────────────────────────────────────────
 st.set_page_config(
     page_title="Brain Tumor Detection",
